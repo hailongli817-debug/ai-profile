@@ -5,7 +5,7 @@
 ---
 id: identity-core
 type: identity
-tags: [身份, 基本盘]
+tags: [身份, 基本盘, 账号, 环境]
 updated: 2026-11-24
 source: AI对话
 confidence: medium
@@ -13,12 +13,18 @@ confidence: medium
 
 # 身份
 
-> 以下据历史对话整理，请逐条核对后再删掉本行。错的地方直接改。
-
 - 常驻 成都（UTC+8），中文简体沟通。
 - 职业方向：多家典当行的线上获客与品牌营销负责人，同时做个人 IP / 内容运营。
 - 决策风格：要可执行方案，不要方向性建议；给方案时默认带上风险和成本。
 - 时间敏感：涉及价格、政策、行情、平台规则的问题，需要先核实时效再回答。
+- GitHub 账号：`hailongli817-debug`；个人档案私有库 `ai-profile`，默认分支 `main`。
+- 本机环境：Windows（win32），Git Bash，git 2.55.0；常用工作区 `C:/Users/Li/WorkBuddy/`。
+- 跨 AI 统一称呼尚未定名：本平台身份文件 SOUL.md / IDENTITY.md / USER.md 仍为未填模板，BOOTSTRAP.md 未完成。
+
+## 置信度标注
+
+- 城市、职业、客户与业务信息来自历史对话整理，`confidence: medium`，引用时说明未经逐条核对。
+- GitHub 账号、本机环境、连接器状态为 2026-11-24 实测，`confidence: high`。
 
 ## 不放进这个文件的内容
 
@@ -107,3 +113,45 @@ confidence: medium
 
 - 表格类任务要带公式（环比、浮动 ±5%）和冻结窗格，能自己算就别手填。
 - 实操类问题（设备、软件、平台操作）只要精确步骤，不要原理科普。
+
+---
+
+---
+id: project-ai-profile
+type: project
+tags: [档案, 跨AI平台, Git]
+status: active
+updated: 2026-11-24
+source: AI对话
+confidence: high
+---
+
+# 跨 AI 平台个人档案库
+
+## 一句话
+
+用 Git 私有库 `hailongli817-debug/ai-profile` 存一份所有 AI 平台共读的个人事实，不再各记各的。
+
+## 现状
+
+- 已完成：目录结构与读写规范（AGENTS.md）、索引、三类 profile、inbox 按平台隔离、packs 自动打包脚本。
+- 已完成：2026-11-24 通过本机 git clone 接入私有库，确认 main 分支可读写。
+- 进行中：把本地环境与账号事实收敛进正式文件，补齐本平台的接入说明。
+- 卡在：本平台 GitHub 连接器的授权范围未覆盖该私有库，API 读取返回 404，暂走本机 git 通道。
+
+## 下一步
+
+1. 在 GitHub 应用授权里把 `ai-profile` 加入可访问仓库，或统一以本机 git clone 作为各平台通道。
+2. 按模板补 `projects/` 业务项目与 `people/` 关键联系人，每类至少一个实例。
+3. 建 `private/local.md` 存敏感信息，确认 .gitignore 生效。
+
+## 关键约束
+
+- 仓库为 private；健康、家庭关系、客户报价只进 `private/`，永不上传。
+- AI 只写 `inbox/<平台>/`，正式文件收敛需用户授权；不 push --force、不改历史、不删别人的 inbox。
+- 单个知识文件 ≤ 40 行，带 YAML front-matter。
+
+## 相关文件
+
+- 本地路径：`C:/Users/Li/WorkBuddy/2026-11-24-12-03-32/ai-profile`
+- 线上链接：https://github.com/hailongli817-debug/ai-profile

@@ -43,7 +43,15 @@ python tools\pack.py
 | Cursor / VS Code / Windsurf | 是 | 是 | GitHub MCP |
 | ChatGPT | 是 | 需 Codex 或自定义 MCP connector | GitHub 连接器只读 |
 | 豆包工作台 | 是 | 是 | 本地 clone，直接读写 |
+| WorkBuddy | 是 | 是 | 本机 git clone 直接读写（GitHub 连接器授权范围未覆盖私有库） |
 | 网页版聊天（Kimi / 元宝 等） | 否 | 否 | 粘贴 `packs/core.md` |
+
+## 已知坑：GitHub 连接器的授权范围
+
+2026-11-24 实测：WorkBuddy 的 GitHub 连接器已授权，但调用 API 读 `ai-profile` 返回 404，
+仓库搜索也报「无权限或不存在」——连接器拿不到这个私有库；本机 git 凭据则能正常 clone。
+因此在本平台走**本地 clone** 通道读写正式文件，不要用 GitHub MCP 反复重试。
+其他平台若要用 MCP，先在 GitHub 的 Applications 授权页把该仓库加入允许列表。
 
 ## 隐私
 
