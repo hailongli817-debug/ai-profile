@@ -8,7 +8,10 @@ ROOT = Path(__file__).resolve().parent.parent
 CORE = [
     "profile/identity.md",
     "profile/business.md",
+    "profile/business-pawn.md",
+    "profile/business-personal-ip.md",
     "profile/preferences.md",
+    "profile/preferences-content.md",
 ]
 OUT = ROOT / "packs" / "core.md"
 MAX_CHARS = 6000
