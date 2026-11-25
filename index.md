@@ -15,6 +15,9 @@
 | `projects/_template.md` | project | 项目文件模板 | 2026-11-24 |
 | `people/_template.md` | person | 联系人模板 | 2026-11-24 |
 | `memory/2026-11-24.md` | log | 建库日志与本机接入记录 | 2026-11-24 |
+| `memory/2026-11-25.md` | log | 接入三家平台 | 2026-11-25 |
+| `connect/CONNECT.md` | doc | ChatGPT / Grok / Gemini 接入清单与权限边界 | 2026-11-25 |
+| `connect/bootstrap-prompt.md` | doc | 各平台开场提示词 | 2026-11-25 |
 
 ## 待补
 
